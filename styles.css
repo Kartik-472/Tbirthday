@@ -1,0 +1,193 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures balloons are not cut off */
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicking through the balloons */
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffcc00, #ff6600);
+    animation: float 5s ease-in-out infinite;
+}
+
+.balloon1 {
+    left: 15%;
+    bottom: 80%;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    left: 35%;
+    bottom: 80%;
+    background: radial-gradient(circle at 30% 30%, #66ccff, #3399ff);
+    animation-delay: 1s;
+}
+
+.balloon3 {
+    left: 55%;
+    bottom: 80%;
+    background: radial-gradient(circle at 30% 30%, #ff99cc, #ff66b2);
+    animation-delay: 2s;
+}
+
+.balloon4 {
+    left: 75%;
+    bottom: 80%;
+    background: radial-gradient(circle at 30% 30%, #99ff99, #66ff66);
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust float distance */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cake-container {
+    position: relative;
+    text-align: center;
+}
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: auto;
+}
+
+.layer {
+    width: 100%;
+    height: 50px;
+    background-color: #ffcc99;
+    border: 2px solid #e6b3a8;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+}
+
+.layer1 {
+    top: -40%;
+}
+
+.layer2 {
+    top: -3%;
+    background-color: #ff9966;
+}
+
+.layer3 {
+    top: 35%;
+    background-color: #ff6666;
+}
+
+.candles {
+    position: absolute;
+    top: -110px;
+    left: 16%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.candle {
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    background-color: #ffcc00;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    margin: 0 15px; /* Adjust spacing between candles */
+}
+
+.candle::before {
+    content: "";
+    width: 8px;
+    height: 15px;
+    background-color: #ff6600;
+    position: absolute;
+    top: -15px;
+    left: 1px;
+    border-radius: 50%;
+    animation: flame 1s infinite;
+}
+
+@keyframes flame {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.6;
+    }
+}
+
+.container {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #003366;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+p {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.note {
+    color: #003366;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #001a33;
+}
